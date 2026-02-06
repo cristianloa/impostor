@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego del Impostor</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <h1>Juego del Impostor</h1>
+
+    <!-- Pantalla: Agregar jugadores -->
+    <section id="screen-add" class="screen">
+        <div class="card">
+            <h2>Agregar jugadores</h2>
+            <input id="playerInput" type="text" placeholder="Nombre del jugador" />
+            <button id="addPlayerBtn">Agregar</button>
+            <ul id="playersList"></ul>
+            <button id="startBtn" class="primary">Empezar juego</button>
+        </div>
+    </section>
+
+    <!-- Pantalla: Revelar rol -->
+    <section id="screen-reveal" class="screen hidden">
+        <div class="card">
+            <h2 id="revealTitle"></h2>
+            <button id="holdRevealBtn" class="big">Mantén presionado para revelar</button>
+            <div id="roleText" class="role"></div>
+            <button id="nextPlayerBtn">Siguiente</button>
+        </div>
+    </section>
+
+    <!-- Pantalla: Ronda -->
+    <section id="screen-round" class="screen hidden">
+        <div class="card">
+            <h2 id="roundTitle"></h2>
+            <p id="startPlayerText"></p>
+            <div id="orderContainer" class="order"></div>
+            <p class="hint">Digan sus pistas en voz alta siguiendo el orden.</p>
+            <button id="goDecisionBtn" class="primary">Ir a decisión</button>
+        </div>
+    </section>
+
+    <!-- Pantalla: Decisión -->
+    <section id="screen-decision" class="screen hidden">
+        <div class="card">
+            <h2>¿Descubrieron al impostor?</h2>
+            <div class="row">
+                <button id="yesBtn" class="primary">Sí</button>
+                <button id="noBtn">No</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pantalla: Resultado -->
+    <section id="screen-result" class="screen hidden">
+        <div class="card">
+            <h2 id="resultTitle"></h2>
+            <p id="resultImpostor"></p>
+            <p id="resultWord"></p>
+            <button id="restartBtn" class="primary">Jugar otra vez</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
